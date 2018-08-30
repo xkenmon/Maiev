@@ -1,0 +1,17 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: registry
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#    service-url: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+
+spring:
+  security:
+    user:
+      name: ${REGISTRY_SERVER_USER:user}
+      password: ${REGISTRY_SERVER_PASSWORD:password}

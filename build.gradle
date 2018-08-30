@@ -1,0 +1,24 @@
+ext {
+    springBootVersion = "2.0.1.RELEASE"
+    springCloudVersion = "Finchley.SR1"
+}
+
+allprojects {
+    group = 'com.xkenmon.maiev'
+    version = '0.1'
+}
+
+subprojects {
+
+    group 'com.xkenmon.maiev'
+
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        maven { url"https://repo.spring.io/libs-release" }
+        jcenter()
+        mavenCentral()
+    }
+}
